@@ -1,0 +1,5 @@
+<form #myForm="ngForm">
+    <app-counter-input name="counter" ngModel></app-counter-input>
+</form>
+
+{{myForm.value | json }}
