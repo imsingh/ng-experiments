@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewChecked } from '@angular/core';
 import { Hello } from './dummyProvider';
+import { Inject } from '@angular/core';
     
 @Component({
   selector: 'app-root',
@@ -8,7 +9,23 @@ import { Hello } from './dummyProvider';
 })
 export class AppComponent {
   title = 'app';
-  constructor(hello: Hello) {
-    // console.log(hello);
+  myData = { name: "Hello" };
+  times: number = 1;
+  constructor() {
+
+  }
+  
+  cd() {
+
+  }
+  updateData() {
+    this.myData = { name: "Hello again!"};
+    this.myData.name = "Hello again!" + this.times;
+    this.times++;
+    
+  }
+
+  ngAfterViewChecked() {
+    // console.log('CD: AppComponent');
   }
 }

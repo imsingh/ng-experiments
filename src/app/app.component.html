@@ -1,5 +1,6 @@
-<form #myForm="ngForm">
-    <app-counter-input name="counter" ngModel></app-counter-input>
-</form>
+<!-- <router-outlet></router-outlet> -->
 
-{{myForm.value | json }}
+<app-cd-component [myData]="myData"></app-cd-component>
+
+<button (click)="cd()">Change Detection</button>
+<button (click)="updateData()">update data</button>
